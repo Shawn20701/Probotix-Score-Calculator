@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css"/>
+</head>
+<body>
+<!--Door (?): Easy to repeat, fast. 2 points
+Soccer (?): Dependent on goal size, 3-5 points.
+Obstacle Course: Needs to hit all obstacles to win, time consuming, 4-6 points.
+Pixel Sort: Takes time, dependent on robot built, 2-3 points.
+Hill: Requires fast robot, time limit. 7-8 points.
+-->
+    <form id="Main_Form">
+        <label for="Num_of_Door">Times Went through door</label>
+        <input type="number" id="Num_of_Door" name="Num_of_Door">
+        <label for="Soccer_Goals">Soccer Goals</label>
+        <input type="number" id="Soccer_Goals" name="Soccer_Goals">
+        <label for="Times_Course_Completed">Times the obstacle course was completed</label>
+        <input type="number" id="Times_Course_Completed" name="Times_Course_Completed">
+        <label for="Pixels_Sorted">Pixels Sorted</label>
+        <input type="number" id="Pixels_Sorted" name="Pixels_Sorted">
+        <label for="Ducks_Push_Up_Hill">Ducks pushed up the hill</label>
+        <input type="number" id="Ducks_Push_Up_Hill" name="Ducks_Push_Up_Hill">
+        <div>
+      <input type="radio" id="Red_Team" name="Team" value="Red" />
+      <label for="Red_Team">Red</label>
+
+      <input type="radio" id="Blue_Team" name="Team" value="Blue" />
+      <label for="Blue_Team">Blue</label>
+    </div>
+    </form>
+    <div class="Button">
+    <button onclick="SubmitForm()">Submit</button>
+    <button onclick="Clear()">Clear</button>
+    <button onclick="CompareScores()">Compare Scores</button>
+    </div>
+    <h1>Total Number of Points: <span id="Form_Output"></span></h1>
+    <h3>Recent Totals: <span id="Recent_Totals"></span></h3>
+    <script src="javascript.js"></script>
+</body>
+</html>
