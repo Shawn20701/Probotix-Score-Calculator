@@ -43,16 +43,21 @@ updateRecent();
 function CompareScores(){
   const red = Compare_Value['Red'];
   const blue = Compare_Value['Blue'];
+  var win = document.getElementById("Winner");
   var redpoints = red.score;
   var bluepoints = blue.score;
   if (redpoints >  bluepoints){
+
     console.log("Red wins");
+    win.innerHTML = "Red";
   }
   else if (bluepoints > redpoints){
-     console.log("Blue wins")
+     console.log("Blue wins");
+     win.innerHTML = "Blue";
   }
   else {
     console.log("error!");
+    win.innerHTML = "Error";
   }
   console.log(bluepoints,redpoints);
 }
