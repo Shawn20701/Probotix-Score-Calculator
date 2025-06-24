@@ -15,15 +15,13 @@ function SubmitForm(){
 const form = document.getElementById('Main_Form');
 const Door_Value = Number(form.elements['Num_of_Door'].value);
 var Door_Points = Door_Value * 2;
-const Soccer_Value = Number(form.elements['Soccer_Goals'].value);
-var Soccer_Points = Soccer_Value * 3;
 const Obstacle_Value = Number(form.elements['Times_Course_Completed'].value);
-var Obstacle_Points = Obstacle_Value * 5;
+var Obstacle_Points = Obstacle_Value * 6;
 const Pixel_Value = Number(form.elements['Pixels_Sorted'].value);
-var Pixel_Points = Pixel_Value * 2;
+var Pixel_Points = Pixel_Value * 4;
 const Hill_Value = Number(form.elements['Ducks_Push_Up_Hill'].value);
 var Hill_Points = Hill_Value * 7;
-var Total = Door_Points + Soccer_Points + Obstacle_Points + Pixel_Points + Hill_Points;
+var Total = Door_Points + Obstacle_Points + Pixel_Points + Hill_Points;
 console.log(Total);
 document.getElementById("Form_Output").innerHTML = Total;
 const team = document.querySelector('input[name="Team"]:checked')?.value;
